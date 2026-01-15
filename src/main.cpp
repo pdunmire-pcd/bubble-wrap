@@ -18,6 +18,18 @@ int main() {
         if (bn::keypad::b_pressed()) {
             bn::backdrop::set_color(bn::color(31,0,31));
             }
+        if (bn::keypad::down_pressed()) {
+            bn::backdrop::set_color(bn::color(14,2,31));
+            }
+        if (bn::keypad::up_pressed()) {
+            bn::backdrop::set_color(bn::color(4,2,21));
+            }
+        if (bn::keypad::left_pressed()) {
+            bn::backdrop::set_color(bn::color(28,10,15));
+            }
+        if (bn::keypad::right_pressed()) {
+            bn::backdrop::set_color(bn::color(19,16,31));
+            }
         bn::core::update();
     }   
     
