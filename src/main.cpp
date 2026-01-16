@@ -17,10 +17,21 @@ int main() {
 
     bn::vector<bn::sprite_ptr, 20> circles = {};
 
-    for(int x = -95; x <= 95; x += 10) {
-        BN_LOG("x value", x);
-        bn::sprite_ptr myCircle = bn::sprite_items::dot.create_sprite(x, 40);
-        circles.push_back(myCircle);
+    bn::vector<bn::sprite_ptr, 30> sprites;  // Increased capacity for multiple lines
+
+    // Horizontal line at top
+    for(int x = -40; x <= 40; x += 20) {
+        sprites.push_back(bn::sprite_items::dot.create_sprite(x, -30));
+    }
+
+    // Vertical line on left
+    for(int y = -20; y <= 20; y += 20) {
+        sprites.push_back(bn::sprite_items::dot.create_sprite(-50, y));
+    }
+
+    // Diagonal line
+    for(int i = -30; i <= 30; i += 15) {
+        sprites.push_back(bn::sprite_items::dot.create_sprite(i, i));
     }
 
     // bn::sprite_ptr myCircle = bn::sprite_items::dot.create_sprite(-40, 40);
