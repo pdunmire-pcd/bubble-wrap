@@ -15,23 +15,13 @@ int main() {
     bn::core::init();
     bn::backdrop::set_color(bn::color(31,18,22));
 
-    bn::vector<bn::sprite_ptr, 20> circles = {};
+    bn::vector<bn::sprite_ptr, 50> sprites;
 
-    bn::vector<bn::sprite_ptr, 30> sprites;  // Increased capacity for multiple lines
-
-    // Horizontal line at top
-    for(int x = -40; x <= 40; x += 20) {
-        sprites.push_back(bn::sprite_items::dot.create_sprite(x, -30));
-    }
-
-    // Vertical line on left
-    for(int y = -20; y <= 20; y += 20) {
-        sprites.push_back(bn::sprite_items::dot.create_sprite(-50, y));
-    }
-
-    // Diagonal line
-    for(int i = -30; i <= 30; i += 15) {
-        sprites.push_back(bn::sprite_items::dot.create_sprite(i, i));
+    // Nested loops for a grid
+    for(int x = -60; x <= 60; x += 30) {
+        for(int y = -60; y <= 60; y += 30) {
+            sprites.push_back(bn::sprite_items::dot.create_sprite(x, y));
+        }
     }
 
     // bn::sprite_ptr myCircle = bn::sprite_items::dot.create_sprite(-40, 40);
