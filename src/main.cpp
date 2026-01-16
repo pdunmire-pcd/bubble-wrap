@@ -12,14 +12,30 @@ int main() {
     bn::core::init();
     bn::backdrop::set_color(bn::color(31,18,22));
 
-    bn::sprite_ptr myCircle = bn::sprite_items::dot.create_sprite(10, 40);
-    bn::sprite_ptr myCircle2 = bn::sprite_items::dot.create_sprite(30, 40);
-    bn::sprite_ptr myCircle3 = bn::sprite_items::dot.create_sprite(40, 50);
-    bn::sprite_ptr myCircle4 = bn::sprite_items::dot.create_sprite(70, 50);
-    bn::sprite_ptr myCircle5 = bn::sprite_items::dot.create_sprite(-70, -50);
-    bn::sprite_ptr myCircle6 = bn::sprite_items::dot.create_sprite(-10, -40);
-    bn::sprite_ptr myCircle7 = bn::sprite_items::dot.create_sprite(-40, -50);
+    // Top left bump of heart
+    bn::sprite_ptr myCircle = bn::sprite_items::dot.create_sprite(-20, -30);
+    bn::sprite_ptr myCircle2 = bn::sprite_items::dot.create_sprite(-10, -35);
+    bn::sprite_ptr myCircle3 = bn::sprite_items::dot.create_sprite(0, -25);
 
+    //top right bump of heart
+    bn::sprite_ptr myCircle4 = bn::sprite_items::dot.create_sprite(10, -35);
+    bn::sprite_ptr myCircle5 = bn::sprite_items::dot.create_sprite(20, -30);
+
+    //Middle sides
+    bn::sprite_ptr myCircle6 = bn::sprite_items::dot.create_sprite(-25, -20);
+    bn::sprite_ptr myCircle7 = bn::sprite_items::dot.create_sprite(25, -20);
+
+    bn::sprite_ptr myCircle8 = bn::sprite_items::dot.create_sprite(-20, -10);
+    bn::sprite_ptr myCircle9 = bn::sprite_items::dot.create_sprite(20, -10);
+
+    //Bottom sides tapering in
+    bn::sprite_ptr myCircle10 = bn::sprite_items::dot.create_sprite(-15, 0);
+    bn::sprite_ptr myCircle11 = bn::sprite_items::dot.create_sprite(15, 0);
+    
+    //Bottom point
+    bn::sprite_ptr myCircle12 = bn::sprite_items::dot.create_sprite(-5, 20);
+    bn::sprite_ptr myCircle13 = bn::sprite_items::dot.create_sprite(5, 20);
+    bn::sprite_ptr myCircle14 = bn::sprite_items::dot.create_sprite(0, 25);
 
     while(true) {
         
