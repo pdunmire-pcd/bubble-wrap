@@ -15,6 +15,10 @@ int main() {
     bn::sprite_ptr myCircle = bn::sprite_items::dot.create_sprite(10, 40);
     bn::sprite_ptr myCircle2 = bn::sprite_items::dot.create_sprite(30, 40);
     bn::sprite_ptr myCircle3 = bn::sprite_items::dot.create_sprite(40, 50);
+    bn::sprite_ptr myCircle4 = bn::sprite_items::dot.create_sprite(70, 50);
+    bn::sprite_ptr myCircle5 = bn::sprite_items::dot.create_sprite(-70, -50);
+    bn::sprite_ptr myCircle6 = bn::sprite_items::dot.create_sprite(-10, -40);
+    bn::sprite_ptr myCircle7 = bn::sprite_items::dot.create_sprite(-40, -50);
 
 
     while(true) {
