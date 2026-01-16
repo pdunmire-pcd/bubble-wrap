@@ -15,9 +15,9 @@ int main() {
     bn::core::init();
     bn::backdrop::set_color(bn::color(31,18,22));
 
-    bn::vector<bn::sprite_ptr, 10> circles = {};
+    bn::vector<bn::sprite_ptr, 20> circles = {};
 
-    for(int x = -40; x <= 40; x += 10) {
+    for(int x = -95; x <= 95; x += 10) {
         BN_LOG("x value", x);
         bn::sprite_ptr myCircle = bn::sprite_items::dot.create_sprite(x, 40);
         circles.push_back(myCircle);
