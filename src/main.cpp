@@ -119,6 +119,11 @@ int main() {
     // bn::sprite_ptr myCircle13 = bn::sprite_items::dot.create_sprite(5, 20);
     // bn::sprite_ptr myCircle14 = bn::sprite_items::dot.create_sprite(0, 25);
 
+    // for(int i = 0; i < sprites.size(); i++) {
+    //     sprites[i].set_scale(1.5);  // This makes it an affine sprite
+    //     bn::core::update();  // Update to see the error happen
+    // }
+
     while(true) {
         
         if (bn::keypad::a_pressed()) {
