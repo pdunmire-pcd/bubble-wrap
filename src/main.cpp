@@ -24,33 +24,61 @@ int main() {
         }
     }
 
-    // Scale the first sprite uniformly
-    sprites[0].set_scale(1.8);
+    // Sprite 0: Big and rotated
+    sprites[0].set_scale(2.0);
+    sprites[0].set_rotation_angle(30);
     
-    // Horizontal scale - makes sprite wider
-    sprites[1].set_horizontal_scale(2.0);
+    // Sprite 1: Stretched horizontally and sheared
+    sprites[1].set_horizontal_scale(2.5);
+    sprites[1].set_shear(0.8);
     
-    // Vertical scale - makes sprite taller
-    sprites[2].set_vertical_scale(2.5);
+    // Sprite 2: Tall and thin with rotation
+    sprites[2].set_horizontal_scale(0.5);
+    sprites[2].set_vertical_scale(3.0);
+    sprites[2].set_rotation_angle(45);
     
-    // Shear - skews the sprite (creates a slanted effect)
-    sprites[3].set_shear(0.5);
+    // Sprite 3: Extreme shear with scale
+    sprites[3].set_shear(1.2);
+    sprites[3].set_scale(1.5);
     
-    // Rotation - rotates the sprite (in degrees)
-    // Note: might be hard to see on a circle!
-    sprites[4].set_rotation_angle(45);
-
-    // set_visible - hides a sprite
-    sprites[5].set_visible(false);
+    // Sprite 4: Multiple transformations combined
+    sprites[4].set_horizontal_scale(2.0);
+    sprites[4].set_vertical_scale(0.5);
+    sprites[4].set_rotation_angle(90);
+    sprites[4].set_shear(0.3);
     
-    // set_horizontal_flip - mirrors horizontally
+    // Sprite 5: Small with mosaic effect
+    sprites[5].set_scale(0.5);
+    sprites[5].set_mosaic_enabled(true);
+    
+    // Sprite 6: Flipped both ways and scaled
     sprites[6].set_horizontal_flip(true);
+    sprites[6].set_vertical_flip(true);
+    sprites[6].set_scale(1.8);
     
-    // set_vertical_flip - mirrors vertically
-    sprites[7].set_vertical_flip(true);
+    // Sprite 7: Stretched and flipped
+    sprites[7].set_horizontal_scale(3.0);
+    sprites[7].set_vertical_scale(0.8);
+    sprites[7].set_horizontal_flip(true);
     
-    // set_mosaic_enabled - creates a pixelated/blocky effect
-    sprites[8].set_mosaic_enabled(true);
+    // Sprite 8: Sheared with different scales
+    sprites[8].set_horizontal_scale(1.5);
+    sprites[8].set_vertical_scale(2.0);
+    sprites[8].set_shear(-0.5);
+    
+    // Sprite 9: Everything at once!
+    sprites[9].set_scale(1.5);
+    sprites[9].set_rotation_angle(60);
+    sprites[9].set_shear(0.4);
+    sprites[9].set_blending_enabled(true);
+    
+    // Sprite 10: Wide and rotated
+    sprites[10].set_horizontal_scale(3.5);
+    sprites[10].set_vertical_scale(1.0);
+    sprites[10].set_rotation_angle(15);
+    
+    // Sprite 11: Invisible (just for fun)
+    sprites[11].set_visible(false);
     
     // set_blending_enabled - allows transparency blending
     sprites[9].set_blending_enabled(true);
