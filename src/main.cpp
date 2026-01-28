@@ -24,6 +24,37 @@ int main() {
         }
     }
 
+    // Scale the first sprite uniformly
+    sprites[0].set_scale(1.8);
+    
+    // Horizontal scale - makes sprite wider
+    sprites[1].set_horizontal_scale(2.0);
+    
+    // Vertical scale - makes sprite taller
+    sprites[2].set_vertical_scale(2.5);
+    
+    // Shear - skews the sprite (creates a slanted effect)
+    sprites[3].set_shear(0.5);
+    
+    // Rotation - rotates the sprite (in degrees)
+    // Note: might be hard to see on a circle!
+    sprites[4].set_rotation_angle(45);
+
+    // set_visible - hides a sprite
+    sprites[5].set_visible(false);
+    
+    // set_horizontal_flip - mirrors horizontally
+    sprites[6].set_horizontal_flip(true);
+    
+    // set_vertical_flip - mirrors vertically
+    sprites[7].set_vertical_flip(true);
+    
+    // set_mosaic_enabled - creates a pixelated/blocky effect
+    sprites[8].set_mosaic_enabled(true);
+    
+    // set_blending_enabled - allows transparency blending
+    sprites[9].set_blending_enabled(true);
+
     // bn::sprite_ptr myCircle = bn::sprite_items::dot.create_sprite(-40, 40);
     // bn::sprite_ptr myCircle2 = bn::sprite_items::dot.create_sprite(-30, 40);
     // bn::sprite_ptr myCircle3 = bn::sprite_items::dot.create_sprite(-20, 40);
